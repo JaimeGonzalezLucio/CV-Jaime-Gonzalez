@@ -1,18 +1,36 @@
+//loading
+
+window.addEventListener("load", function() {
+  
+})
+
+window.onload = function() {
+  const loader = document.getElementById('loader')
+  const body = document.getElementById('body')
+  console.log(loader);
+  console.log(body);
+  loader.classList.add("none")
+  body.classList.remove("hidden")  
+};
+
 //menu
 
 const menu = document.getElementById('menu')
 const listItems = document.getElementById('list_items')    
 const items = document.querySelectorAll('.list_item')
+const body = document.getElementById('body')
 
     menu.addEventListener('click', function() {        
         listItems.classList.toggle('nav__items--show')
-        menu.classList.toggle('open')        
+        menu.classList.toggle('open')       
+        body.classList.toggle('hidden') 
     })
 
     items.forEach(function(item) {
         item.addEventListener('click', function() {        
             listItems.classList.remove('nav__items--show')
             menu.classList.toggle('open')       
+            body.classList.toggle('hidden') 
         })
     });
 

@@ -31,7 +31,7 @@ html{
 body{    
     font-family: 'Poppins',Arial, Helvetica, sans-serif;    
     background-color: var(--bg2);        
-    color: #fff;
+    color: #fff;    
 }
 
 ::-webkit-scrollbar{
@@ -48,6 +48,47 @@ body{
     border-radius: 5px;
 }
 
+/* loader */
+
+.loader{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg1);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10vmin;        
+  transition: opacity 0.75s, visibility 0.75;
+}
+
+.loader span {
+  display: inline-block;
+  animation: pulse 0.5s alternate infinite ease-in-out;
+  &:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.none{
+  opacity: 0;
+  transition: .3s;  
+  display: none;
+}
+
+.hidden{
+  overflow: hidden;
+}
+
 /* nav */
 
 nav{        
@@ -59,7 +100,8 @@ nav{
     justify-content: space-between;
     padding: 15px;
     align-items: center;
-    background-color: var(--bg2);         
+    background-color: var(--bg2);        
+    opacity: 0.9; 
 }
 
 .nav__logo{
@@ -226,10 +268,7 @@ nav{
   
   .code_text{
     font-size: .6rem;  
-  }
-
-  .normalText{    
-    font-size: .6rem;    
+    opacity: .5;
   }
   
   .spanBlock{
@@ -252,27 +291,9 @@ nav{
     font-family: "Courier new";
   }
 
- .title{        
-    height: max-content;          
-    display: inline;   
-    width: 100%;    
-}
-
-.main_text{  
-  
-}
-
-.main_title{
-  font-size: 1rem;              
-}
-
-.main_title{
-    margin-left: 5%;           
-}
-
-section{
-  min-height: 100vh;
-}
+  section{
+    min-height: 100vh;
+  }
 
 /* main */
     
@@ -283,6 +304,27 @@ section{
 
 #main{
     min-height: 100vh;    
+}
+
+.main_title{
+  font-size: 1rem;   
+  margin-left: 5%;           
+  position: relative;
+  font-size: 5vw;       
+}
+
+.title_name{
+  position: absolute;
+}
+
+.title{        
+  height: max-content;          
+  display: inline;   
+  width: 100%;      
+}
+
+.main_text p:last-child{
+  margin-top: 10vw;
 }
 
 /* first section */
@@ -311,15 +353,22 @@ section{
     object-fit: cover;    
 }
 
-/* second section */
-
-.about__text span{     
-  font-size: .6rem;     
+.main_image video{
+  border-radius: 30% 70% 70% 30% / 28% 30% 70% 72% ;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;    
 }
 
-.about__text p,
-.about__text h5{
+/* second section */
+
+.about__text p{
   font-size: 0.9rem;  
+  margin-left: 10%;
+}
+
+.about__text h5{
+  font-size: 1.3rem;  
   margin-left: 10%;
 }
 
@@ -337,7 +386,8 @@ section{
   gap: 4vmin;      
   margin-left: 3%;
   transform: translate(0%,0%); 
-  user-select: none; /* -- Prevent image highlighting -- */  
+  user-select: none;
+  margin-top: 150px;
 }
 
 #image-track > .image {
@@ -345,41 +395,13 @@ section{
   height: 200px;
   object-fit: cover;
   object-position: 100% center;  
-  border-radius: 20px;
-}
-
-
-#image-track {
-  display: flex;
-  width: min-content;  
-  gap: 4vmin;      
-  margin-left: 3%;
-  transform: translate(0%,0%); 
-  user-select: none;
-  margin-top: 150px;
-  padding-left: 10%;  
-}
-
-#image-track > .image {
-  width: 42vmin;
-  height: 55vmin;  
-  object-fit: cover;
-  object-position: 100% center;  
-  border-radius: 20px;
-}
-
-#image-track span{
-  font-size: .6rem;   
+  border-radius: 20px;  
 }
 
 /* cards */
 
 #skills{
   margin-bottom: 80px;
-}
-
-.skills_text span{
-  font-size: .6rem;   
 }
 
 .cards{
@@ -418,10 +440,6 @@ figcaption{
 
 
 /* experience */
-
-.experience_text span{
-  font-size: .6rem;   
-}
 
 .experience_text{    
   display: block;  
@@ -468,8 +486,8 @@ figcaption{
 .contact_title{  
   width: 90%;
   text-align: center;
-  margin: 30px auto 0;
-  font-size: 1.5rem;
+  margin: 100px auto 0;
+  font-size: 1.3rem;
 }
 
 .contact{  
@@ -494,19 +512,34 @@ figcaption{
   object-fit: cover;  
 }
 
-span{
-  opacity: .6;
+/* media for tablet */
+
+@media (min-width:768px){
+  .main_title{    
+    font-size: 3vw;       
+  }
+  
+  .main_text p:last-child{
+    margin-top: 6vw;
+  }
 }
 
-  /* media for desktop */
+/* media for desktop */
 
-/* @media (min-width:769px) { */
 @media (min-width:1024px) {  
+
+  .hidden{
+    overflow: auto;
+  }
 
   #menu{
     display: none;
   }
-  
+
+  .code_text{
+    font-size: 0.9rem;
+  }
+
   .nav__logo{
     font-size: 1.5rem;
     padding: 5px;
@@ -555,17 +588,17 @@ span{
     justify-content: center;        
   }
 
-  .main_text span{
-    font-size: 1rem;
+  .main_text p:last-child{
+    margin-top: 4vw;
   }
 
   .main_title{
-    font-size: 2.1vw;
+    font-size: 2vw;          
   }
 
   .main_title span{
-    font-size: 2.1vw;
-  }
+    font-size: 2vw;        
+  }  
 
   .main_image{
     order: 1;        
@@ -584,21 +617,29 @@ span{
     object-fit: cover;    
   }
 
+  .main_image video{
+    border-radius: 30% 70% 70% 30% / 28% 30% 70% 72% ;    
+    height: 95%;        
+    width: 95%;
+    object-fit: cover;    
+  }
+
   /* about */
 
-  .about__text span{     
-    font-size: 1rem;     
+  .about__text{    
+    height: 40vh;    
   }
-  
-  .about__text p,
+
   .about__text h5{
-    font-size: 1.3rem;  
+    font-size: 1.5rem;  
     margin-left: 10%;
   }
 
   .about__text p{
+    font-size: 1.2rem;  
+    margin-left: 10%;
     display: block;
-    width: 50%;
+    width: 70%;
   }
 
   /* gallery */
@@ -614,47 +655,35 @@ span{
     gap: 4vmin;    
     transform: translate(0%, -50%); 
     user-select: none;
-    padding-left: 40%;
-    margin-top: 350px;
+    padding-left: 40%;    
+    height: 40vh;
   }
 
   #image-track > .image {
-    width: 30vmin;
-    height: 45vmin;
+    width: 28vmin;
+    height: 38vmin;
     object-fit: cover;
     object-position: 100% center;  
     border-radius: 20px;
   }
 
-  #image-track span{
-    font-size: 1rem;   
-  }
-  
   /* skills */
 
-  .skills_text span{
-    font-size: 1rem;   
-  }
-  
   .cards{
     gap: 20px;
   }
 
   .card{
-    min-width: 35vmin;
-    width: 35vmin;
-    max-width: 35vmin;
-    min-height: 35vmin;
-    height: 35vmin;
-    max-height: 35vmin;    
+    min-width: 30vmin;
+    width: 30vmin;
+    max-width: 30vmin;
+    min-height: 30vmin;
+    height: 30vmin;
+    max-height: 30vmin;    
     padding: 50px;
   }
 
   /* experience */
-
-  .experience_text span{
-    font-size: 1rem;   
-  }
 
   .experience_card{  
     display: flex;
@@ -663,8 +692,6 @@ span{
     flex-direction: row;    
   }
 
-  /* experience */
-
   .experience_text{  
     margin-top: 100px;
     display: block;  
@@ -672,14 +699,14 @@ span{
   }
 
   .experience_container{
-  width: 50%;    
-  height: 50%;  
+    width: 50%;    
+    height: 50%;  
   }
 
   .experience_card{  
-  display: flex;
-  margin-bottom: 50px;
-  padding-right: 30px;
+    display: flex;
+    margin-bottom: 50px;
+    padding-right: 30px;
   }
 
   .experience_card .date{
@@ -688,9 +715,9 @@ span{
   }
 
   .experience_card .description{
-  border-left: 5px solid var(--bg4);
-  padding-left: 30px;
-  width: 70%;
+    border-left: 5px solid var(--bg4);
+    padding-left: 30px;
+    width: 70%;
   }
 
 }

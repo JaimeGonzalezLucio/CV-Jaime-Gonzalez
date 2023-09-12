@@ -6,8 +6,12 @@
     <title>Jaime Gonzalez</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="hidden" id="body">
     
+    <div class="loader" id="loader">
+      <span>{</span><span>}</span>
+    </div>
+
     <header>
         <nav>            
             <div class="nav__logo">
@@ -36,9 +40,9 @@
         <section class="container" id="main">
             <div class="main_container">
                 <div class="main_text">
-                    <span class="normalText "><span class="pink normalText">welcome</span><span class="purple">(</span><span class="green">name</span><span class="purple">)</span><span class="grey">{</span></span>
-                        <span class="normalText spanBlock spanItalic">// home text</span>
-                    <span class="normalText spanBlock yellow">console<span class="pink">.</span>log<span class="purple">(</span><span class="cyan">`</span></span>
+                    <span class="code_text "><span class="pink code_text">welcome</span><span class="purple">(</span><span class="green">name</span><span class="purple">)</span><span class="grey">{</span></span>
+                        <span class="code_text spanBlock spanItalic">// home text</span>
+                    <span class="code_text spanBlock yellow">console<span class="pink">.</span>log<span class="purple">(</span><span class="cyan">`</span></span>
                     <div class="main_title">
                       <p>¡Hola! soy</p>                
                         <div class="title_name">
@@ -48,42 +52,43 @@
                         </div>
                       <p>Desarrollador Frontend</p>    
                     </div>
-                    <span class="normalText spanBlock"><span class="cyan">`</span><span class="purple">)</span><span class="green">;</span></span>
-                    <span class="normalText grey">}</span>
+                    <span class="code_text spanBlock"><span class="cyan">`</span><span class="purple">)</span><span class="green">;</span></span>
+                    <span class="code_text grey">}</span>
                 </div>
                 <div class="main_image">
-                    <img src="images/pexels-photo-5914921.jpeg" alt="">
+                    <!-- <img src="images/pexels-photo-5914921.jpeg" alt=""> -->
+                    <video src="video/First Official Sub 10! 8.65 3x3 Solve.mp4" autoplay loop muted></video>
                 </div>
             </div>
         </section>
 
         <section class="container" id="about">
             <div class="about__text">
-                <span class="pink">about</span><span class="purple">()</span><span class="grey">{</span>
-                <span class="spanItalic spanBlock"> // Dont move this code</span>
-                <span class="spanBlock grey"><span class="pink">return</span> <span class="yellow">tag </span><span class="cyan">`</span>Sobre mí, <span class="orange">$</span><span class="blue">{</span> <span class="purple">this</span> <span class="red">.</span> <span class="green">message</span> <span class="blue">}</span> !<span class="cyan">`</span><span class="green">;</span></span>                        
+                <span class="pink code_text">about</span><span class="purple code_text">()</span><span class="grey code_text">{</span>
+                <span class="spanItalic spanBlock code_text"> // Dont move this code</span>
+                <span class="spanBlock grey code_text"><span class="pink code_text">return</span> <span class="yellow code_text">tag </span><span class="cyan code_text">`</span>Sobre mí, <span class="orange code_text">$</span><span class="blue code_text">{</span> <span class="purple code_text">this</span> <span class="red code_text">.</span> <span class="green code_text">message</span> <span class="blue code_text">}</span> !<span class="cyan code_text">`</span><span class="green code_text">;</span></span>                        
                   <h5>Sobre mí</h5>                        
                   <p>
-                      <span class="grey"><</span>
-                      <span class="blue">p</span>
-                      <span class="grey">></span>
+                      <span class="grey code_text"><</span>
+                      <span class="blue code_text">p</span>
+                      <span class="grey code_text">></span>
                       Egresado de la Universidad Politécnica de Tulancingo (UPT),
                       con pasión para enseñar, aprender y ayudar, En mi camino
                       por el desarrollo web he tenido muchas experiencias y
                       aprendizajes, así como el acercamiento a diversos lenguajes
                       y tecnologías para el desarrollo
-                      <span class="grey"><</span>
-                      <span class="grey">/</span>
-                      <span class="blue">p</span>
-                      <span class="grey">></span>
+                      <span class="grey code_text"><</span>
+                      <span class="grey code_text">/</span>
+                      <span class="blue code_text">p</span>
+                      <span class="grey code_text">></span>
                   </p>            
-                <span class="grey">}</span>
+                <span class="grey code_text">}</span>
               </div>
               <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
                 <div class="spanFlex">
-                    <span class="grey"><</span>            
-                    <span class="blue" style="margin-right: 5px;">div</span>
-                    <span class="grey">class="drag"></span>
+                    <span class="grey code_text"><</span>            
+                    <span class="blue code_text" style="margin-right: 5px;">div</span>
+                    <span class="grey code_text">class="drag"></span>
                 </div>
                     <img class="image" src="images/IMG_20211120_091357.jpg" draggable="false" data-src="imagen-a-cargar.jpg" loading="lazy" alt="Arenita"/>
                     <img class="image" src="images/308067602_452481730186395_4100296044973518092_n (1).jpg" draggable="false" data-src="imagen-a-cargar.jpg" loading="lazy" alt="WTB"/>
@@ -95,21 +100,21 @@
                     <img class="image" src="images/307838210_464243309064594_4992344141874422973_n (1).jpg" draggable="false"  data-src="imagen-a-cargar.jpg" loading="lazy" alt="WTB"/>            
                     <img class="image" src="images/Screenshot_20200616-103419~2.png" draggable="false"  data-src="imagen-a-cargar.jpg" loading="lazy" alt="algodon"/>      
                 <div class="spanFlex">
-                    <span class="grey"><</span>
-                    <span class="grey">/</span>
-                    <span class="blue">div</span>
-                    <span class="grey">></span>      
+                    <span class="grey code_text"><</span>
+                    <span class="grey code_text">/</span>
+                    <span class="blue code_text">div</span>
+                    <span class="grey code_text">></span>      
                 </div>           
               </div>
         </section>
 
         <section class="container" id="skills">
             <div class="skills_text">
-                <span class="pink">flashlight</span><span class="purple">()</span><span class="grey">{</span>
-                <span class="spanItalic spanBlock"> // hover</span>    
-                <span class="yellow spanBlock">card<span class="pink">.</span>style<span class="pink">.</span>setProperty<span class="purple">(</span><span class="cyan">"</span><span class="grey">--mouse-x</span><span class="cyan">"</span>, <span class="cyan">`</span><span class="orange">$</span><span class="blue">{</span><span class="green">x</span><span class="blue">}</span><span class="grey">px</span><span class="cyan">`</span><span class="purple">)</span>;</span>                      
-                <span class="yellow spanBlock">card<span class="pink">.</span>style<span class="pink">.</span>setProperty<span class="purple">(</span><span class="cyan">"</span><span class="grey">--mouse-y</span><span class="cyan">"</span>, <span class="cyan">`</span><span class="orange">$</span><span class="blue">{</span><span class="green">y</span><span class="blue">}</span><span class="grey">px</span><span class="cyan">`</span><span class="purple">)</span>;</span>
-                <span class="grey spanBlock">}</span>
+                <span class="pink code_text">flashlight</span><span class="purple code_text">()</span><span class="grey code_text">{</span>
+                <span class="spanItalic spanBlock code_text"> // hover</span>    
+                <span class="yellow spanBlock code_text">card<span class="pink code_text">.</span>style<span class="pink code_text">.</span>setProperty<span class="purple code_text">(</span><span class="cyan code_text">"</span><span class="grey code_text">--mouse-x</span><span class="cyan code_text">"</span>, <span class="cyan code_text">`</span><span class="orange code_text">$</span><span class="blue code_text">{</span><span class="green code_text">x</span><span class="blue code_text">}</span><span class="grey code_text">px</span><span class="cyan code_text">`</span><span class="purple code_text">)</span>;</span>                      
+                <span class="yellow spanBlock code_text">card<span class="pink code_text">.</span>style<span class="pink code_text">.</span>setProperty<span class="purple code_text">(</span><span class="cyan code_text">"</span><span class="grey code_text">--mouse-y</span><span class="cyan code_text">"</span>, <span class="cyan code_text">`</span><span class="orange code_text">$</span><span class="blue code_text">{</span><span class="green code_text">y</span><span class="blue code_text">}</span><span class="grey code_text">px</span><span class="cyan code_text">`</span><span class="purple code_text">)</span>;</span>
+                <span class="grey spanBlock code_text">}</span>
               </div>
             <div class="cards">
                 <figure class="card">
@@ -153,13 +158,13 @@
         
         <section class="container" id="experience">
             <div class="experience_text">
-                <span class="yellow">Interface </span><span class="pink">DatosExperiencia</span><span class="grey">{</span>                                              
-                  <span class="spanBlock"><span class="cyan">fecha_inicio</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
-                  <span class="spanBlock"><span class="cyan">fecha_fin</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
-                  <span class="spanBlock"><span class="cyan">empresa</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
-                  <span class="spanBlock"><span class="cyan">puesto</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
-                  <span class="spanBlock"><span class="cyan">descripcion</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>                      
-                <span class="grey">}</span>
+                <span class="yellow code_text">Interface </span><span class="pink code_text">DatosExperiencia</span><span class="grey code_text">{</span>                                              
+                  <span class="spanBlock code_text"><span class="cyan">fecha_inicio</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
+                  <span class="spanBlock code_text"><span class="cyan">fecha_fin</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
+                  <span class="spanBlock code_text"><span class="cyan">empresa</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
+                  <span class="spanBlock code_text"><span class="cyan">puesto</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>
+                  <span class="spanBlock code_text"><span class="cyan">descripcion</span><span class="green"> : </span><span class="orange">string</span><span class="green">;</span></span>                      
+                <span class="grey code_text">}</span>
             </div>
 
             <div class="experience_container">
@@ -239,7 +244,7 @@
 
     </footer>
 
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
