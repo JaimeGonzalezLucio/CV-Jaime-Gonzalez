@@ -36,7 +36,7 @@ const body = document.getElementById('body')
 
 //text
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUV";
 
 let interval = null;
 
@@ -54,7 +54,7 @@ function startAnimation() {
           return h1Element.dataset.value[index];
         }
 
-        return letters[Math.floor(Math.random() * 26)];
+        return letters[Math.floor(Math.random() * 22)];
       })
       .join("");
 

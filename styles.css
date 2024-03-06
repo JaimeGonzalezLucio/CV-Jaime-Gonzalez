@@ -31,7 +31,9 @@ html{
 body{    
     font-family: 'Poppins',Arial, Helvetica, sans-serif;    
     background-color: var(--bg2);        
-    color: #fff;    
+    color: #fff;        
+    max-width: 60rem;
+    margin: 0 auto;    
 }
 
 ::-webkit-scrollbar{
@@ -51,8 +53,9 @@ body{
 /* loader */
 
 .loader{
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
   z-index: 1000;
   background-color: var(--bg1);
   height: 100vh;
@@ -91,8 +94,14 @@ body{
 
 /* nav */
 
-nav{        
-    width: 100%;            
+header{  
+  width: 100%;    
+  max-width: 70rem;          
+}
+
+nav{            
+    width: 100%;    
+    max-width: 60rem;
     position: fixed;
     top: 0;        
     z-index: 100;
@@ -101,7 +110,8 @@ nav{
     padding: 15px;
     align-items: center;
     background-color: var(--bg2);        
-    opacity: 0.9; 
+    opacity: 0.9;     
+    margin: 0 auto;        
 }
 
 .nav__logo{
@@ -267,8 +277,8 @@ nav{
   }
   
   .code_text{
-    font-size: .6rem;  
-    opacity: .5;
+    font-size: .7rem!important;      
+    opacity: .3;
   }
   
   .spanBlock{
@@ -291,30 +301,22 @@ nav{
     font-family: "Courier new";
   }
 
-  section{
-    min-height: 100vh;
-  }
-
 /* main */
     
 .container{
     width: 90%;
     margin: 0 auto;
-}
-
-#main{
-    min-height: 100vh;    
+    /* padding-bottom: 2rem; */
 }
 
 .main_title{
-  font-size: 1rem;   
-  margin-left: 5%;           
+  font-size: 2rem;            
   position: relative;
-  font-size: 5vw;       
+  /* font-size: 5vw;        */
 }
 
 .title_name{
-  position: absolute;
+  line-height: 2.5rem;
 }
 
 .title{        
@@ -323,18 +325,13 @@ nav{
   width: 100%;      
 }
 
-.main_text p:last-child{
-  margin-top: 10vw;
-}
-
 /* first section */
 
 .main_container{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-bottom: 30px;
-    padding-top: 100px;        
+    padding: 9rem 0 4rem;     
 }
 
 .main_image{
@@ -401,9 +398,9 @@ nav{
 /* cards */
 
 #skills{
-  margin-bottom: 80px;
+  margin-bottom: 4rem;
 }
-
+/* 
 .cards{
   margin-top: 50px;
   display: flex;
@@ -431,7 +428,7 @@ nav{
   width: 50%;
   height: 50%;
   object-fit: cover;
-}
+} */
 
 figcaption{
   margin: 10px 0;
@@ -471,7 +468,7 @@ figcaption{
 }
 
 .experience_card .description p:first-child{
-  font-size: 1.3rem;   
+  font-size: 1.5rem;   
 }
 
 .experience_card .description p:nth-child(2){  
@@ -503,7 +500,8 @@ figcaption{
 .contact a{  
   display: block;
   width: 50px;
-  height: 50px;    
+  height: 50px;      
+  cursor: pointer; 
 }
 
 .contact a img{
@@ -516,12 +514,10 @@ figcaption{
 
 @media (min-width:768px){
   .main_title{    
-    font-size: 3vw;       
-  }
-  
-  .main_text p:last-child{
-    margin-top: 6vw;
-  }
+    /* font-size: 3vw;     */
+    font-size: 2rem;      
+  }  
+
 }
 
 /* media for desktop */
@@ -565,39 +561,29 @@ figcaption{
   
   /* main */
 
-  #main{    
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
   .main_container{    
     flex-direction: row;    
     min-width: max-content;            
     width: 100%;    
     align-items: center;
-    justify-content: center;    
-    min-height: 80vh;
-    padding: 0;
+    justify-content: start;        
   }
 
   .main_text{    
-    width: 50%;        
+    width: 100%;        
     display: flex;
     flex-direction: column;
-    justify-content: center;        
-  }
-
-  .main_text p:last-child{
-    margin-top: 4vw;
+    justify-content: center;         
   }
 
   .main_title{
-    font-size: 2vw;          
+    /* font-size: 1.2vw;               */
+    font-size: 2rem;   
   }
 
   .main_title span{
-    font-size: 2vw;        
+    /* font-size: 1.2vw;             */
+    font-size: 2rem;   
   }  
 
   .main_image{
@@ -669,7 +655,7 @@ figcaption{
 
   /* skills */
 
-  .cards{
+  /* .cards{
     gap: 20px;
   }
 
@@ -681,32 +667,25 @@ figcaption{
     height: 30vmin;
     max-height: 30vmin;    
     padding: 50px;
-  }
+  } */
 
   /* experience */
 
   .experience_card{  
     display: flex;
-    margin-bottom: 50px;
-    padding-right: 30px;
+    margin-bottom: 50px;    
     flex-direction: row;    
   }
 
   .experience_text{  
-    margin-top: 100px;
+    margin-top: 10px;
     display: block;  
     width: 90%;     
   }
 
-  .experience_container{
-    width: 50%;    
-    height: 50%;  
-  }
-
   .experience_card{  
     display: flex;
-    margin-bottom: 50px;
-    padding-right: 30px;
+    margin-bottom: 50px;    
   }
 
   .experience_card .date{
@@ -719,5 +698,169 @@ figcaption{
     padding-left: 30px;
     width: 70%;
   }
+
+}
+
+
+.card{
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;    
+  gap: 1rem; 
+  border-radius: 15px;  
+  transition: .5s;
+}
+
+.card:hover .card_img img{
+  border-radius: 15px;
+  width: 105%;
+  height: 105%;
+  object-fit: cover;
+  object-position: center;
+  transition: .5s;
+}
+
+.card:hover h3{      
+  transition: .5s;
+  font-size: 1.6rem;
+}
+
+.card_img{      
+  max-width: 400px;  
+  min-height: 220px;  
+  max-height: 220px;  
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+}
+
+.card_img img{
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: .5s;
+}
+
+.card_text{
+  display: flex;  
+  justify-content: start;
+  flex-direction: column;  
+  width: calc(100% - 450px);
+  min-width: 350px;    
+}
+
+.card_text h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  
+  gap: 5px;
+  margin: .5rem 0;  
+}
+
+.skills span,
+.skills a{
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;    
+  font-size: .8rem;
+}
+
+.skills a{
+  cursor: pointer;
+}
+
+.skills span img,
+.btn_project img,
+.skills a img{
+  width: .8rem;
+  object-fit: contain;
+}
+
+.btn_project{
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;    
+  font-size: 1rem;
+  margin: 10px 0;
+  transition: .5s;
+}
+
+.btn_project:hover{
+  font-size: 1.1rem;
+  transition: .5s;
+}
+
+#main .contact{
+  padding: 0;
+  margin: 10px 0;
+  justify-content: start;
+  gap: 10px 40px;
+}
+
+#main .contact a{
+  width: 35px;
+  height: 35px;    
+}
+
+.subtitle{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  h1{
+    font-size: 2rem;      
+  }
+}
+
+@media  (max-width: 850px) {
+
+  .card{    
+    background-color: #415a7742;    
+  }
+
+  .card_img{      
+    width: 100%;
+    max-width: 100%;   
+  }
+
+  .card_text{
+    width: 100%;
+    max-width: 100%;   
+    padding: 10px;
+  }
+
+  .main_title{
+    font-size: 1.5rem;    
+  }
+
+  .title{
+    font-size: 1.7rem;
+  }
+
+  .main_container{
+    padding-bottom: 2rem;
+  }
+
+  #skills{
+    margin-bottom: 2rem;
+  }  
 
 }
