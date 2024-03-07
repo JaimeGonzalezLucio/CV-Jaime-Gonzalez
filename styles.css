@@ -75,6 +75,11 @@ body{
   }
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 @keyframes pulse {
   to {
     transform: scale(0.8);
