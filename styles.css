@@ -749,7 +749,7 @@ figcaption{
   justify-content: start;
   flex-direction: column;  
   width: calc(100% - 450px);
-  min-width: 350px;    
+  text-wrap: wrap;
 }
 
 .card_text h3{
@@ -855,6 +855,10 @@ figcaption{
     font-size: 1.7rem;
   }
 
+  .subtitle{
+    font-size: 1.5rem;
+  }
+
   .main_container{
     padding-bottom: 2rem;
   }
@@ -862,5 +866,22 @@ figcaption{
   #skills{
     margin-bottom: 2rem;
   }  
+
+}
+
+
+@media  (max-width: 400px) {
+
+  .main_title,
+  .title{
+    font-size: clamp(1.4rem, 1.4vw, 1.4rem);;
+    line-height: 1.3rem;    
+  }
+
+  .title_name{
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;    
+  }
 
 }
