@@ -284,6 +284,7 @@ nav{
   .code_text{
     font-size: .7rem!important;      
     opacity: .3;
+    opacity: 0;
   }
   
   .spanBlock{
@@ -403,7 +404,7 @@ nav{
 /* cards */
 
 #skills{
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 /* 
 .cards{
@@ -708,7 +709,7 @@ figcaption{
 
 
 .card{
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 3rem;
   display: flex;
   flex-wrap: wrap;
   width: 100%;    
@@ -889,4 +890,9 @@ figcaption{
     max-width: 100%;    
   }
 
+}
+
+.buttons-container{
+  display: flex;
+  gap: .5rem;
 }
